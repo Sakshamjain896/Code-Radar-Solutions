@@ -1,13 +1,13 @@
 #include<stdio.h>
 int main(){
-   float a,b,product;
+   float num1,num2,product;
    printf("Enter the first number: ");
-   scanf("%f",&a);
+   scanf("%f",&num1);
    printf("Enter the second numner: ");
-   scanf("%f", &b);
+   scanf("%f", &num2);
 
-   product = a*b;
-   printf("Product: %.2f\n",a,b,product);
+   product = num1*num2;
+   printf("Product: %.2f\n",num1,num2,product);
 
    return 0;
 }
