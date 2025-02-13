@@ -1,6 +1,6 @@
 #include<stdio.h>
-int main(){
-   float num1,num2,product;
+int main() {
+   float num1, num2, product;
    printf("Enter the first number: ");
    scanf("%f",&num1);
 
