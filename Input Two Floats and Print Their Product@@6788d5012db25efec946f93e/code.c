@@ -8,8 +8,8 @@ int main(){
    scanf("%f", &num2);
 
    product = num1*num2;
-   
-   printf("Product: %.2f\n",num1,num2,product);
+
+   printf("The Product of %.2f and %.2f is %.2f\n", num1, num2, product);
 
    return 0;
 }
