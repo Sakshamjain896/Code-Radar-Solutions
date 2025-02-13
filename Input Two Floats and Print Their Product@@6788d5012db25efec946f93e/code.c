@@ -3,6 +3,7 @@ int main() {
    double ch;
    double ch2;
    scanf("%lf %lf", &ch, &ch2);
-   printf("Product: %.2f\n", product);
+   double(ch3= ch*ch3);
+   printf("Product: %.2f\n", ch3);
    return 0;
 }
