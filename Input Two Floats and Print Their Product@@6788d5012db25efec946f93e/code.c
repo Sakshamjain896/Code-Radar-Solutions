@@ -7,7 +7,7 @@ int main(){
    scanf("%f", &b);
 
    product = a*b;
-   printf("Product of %.2f and %.2f is %.2f\n",a,b,product);
-   
+   printf("Product: %.2f\n",a,b,product);
+
    return 0;
 }
