@@ -1,11 +1,12 @@
-#include<stdio.h>
-int main(){
-    char str1[100], str2[200];
-    
-    scanf("%s", &str1);
+#include <stdio.h>
 
-    scanf("%s", str2);
+int main() {
+    char str1[50], str2[50];
 
-    printf("You entered:\nFirst String: %s\nSecond String: %s\n", str1,str2);
+    printf("Enter two words: ");
+    scanf("%s %s", str1, str2);
+
+    printf("You entered: %s and %s\n", str1, str2);
+
     return 0;
 }
