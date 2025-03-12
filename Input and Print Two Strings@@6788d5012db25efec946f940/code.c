@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(){
-    char str1[Hello], str2[World];
+    char str1[100], str2[100];
     
     scanf("%s", &str1);
 
