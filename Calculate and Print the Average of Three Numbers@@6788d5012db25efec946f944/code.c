@@ -2,6 +2,7 @@
 int main(){
     int a,b,c,Avg;
     scanf("%d%d%d", &a,&b,&c);
-    printf("Average: ");
-    return 0;
+    Avg=(a+b+c)/3;
+    printf("%d"Average: );
+    Average;
 }
