@@ -1,5 +1,5 @@
 // C++ code to implement above approach
-#include <iostream>
+#include <stdio.h>
 using namespace std;
 
 // Function to print the array
