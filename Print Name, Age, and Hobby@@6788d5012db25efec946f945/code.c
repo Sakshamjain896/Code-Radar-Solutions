@@ -1,12 +1,10 @@
 #include<stdio.h>
 int main(){
-    int name, age, hobby;
+    char name[50], hobby[50];
+    int age;
 
-    scanf("%d %d %d", &name, &age, &hobby);
-    printf("Name: Alice\nAge: 25\nHobby: Painting");
-
-    scanf("%d %d %d", &name, &age, &hobby);
-    printf("Name: Bob\nAge: 30\nHobby: Reading");
+    scanf("%c %d %c", &name, &age, &hobby);
+    printf("Name: %c\nAge: %d\nHobby: %c",name,age,hobby);
 
     return 0;
 }
