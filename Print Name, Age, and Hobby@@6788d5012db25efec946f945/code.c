@@ -3,7 +3,7 @@ int main(){
     int name, age, hobby;
 
     scanf("%d %d %d", &name, &age, &hobby);
-    printf("Name: Alice Age: 25 Hobby: Painting");
+    printf("Name: Alice\n Age: 25\n Hobby: Painting");
 
     return 0;
 }
