@@ -3,8 +3,7 @@ int main(){
     int name, age, hobby;
 
     scanf("%d %d %d", &name, &age, &hobby);
-    printf(" Enter: name\n    :age\n    :hobby\n");
+    printf(" Enter: Alice\n   :25\n    :Painting\n");
 
-    printf("You entered: name\n :age\n :hobby\n");
     return 0;
 }
