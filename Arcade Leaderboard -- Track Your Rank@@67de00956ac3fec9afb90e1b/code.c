@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+// Function prototypes
+void computeRanks(int scores[], int ranks[], int n);
+void findRanks(int scores[], int ranks[], int n, int playerScores[], int m);
+
 // Function to compute ranks
 void computeRanks(int scores[], int ranks[], int n) {
     ranks[0] = 1;
