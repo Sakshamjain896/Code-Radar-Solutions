@@ -1,29 +1,34 @@
 #include <stdio.h>
-int main(){
-    int n;
-    scanf("%d",&n);
-    if (n<=1){
-        printf("-1");
-        return 0;
-    }
-    int arr[n];
-    for(int i=0;i<n;i++){
-        scanf("%d",&arr[i]);
-    }
-    if (arr[0]>arr[1]){
-        printf("%d",arr[0]);
-    }
-    for(int i=1;i<n-1;i++){
-        if (arr[i]>arr[i+1]&&arr[i]>arr[i-1]){
-            printf("%d",arr[i]);
-            return 0;
+
+// Function to check if the array is sorted
+int isSorted(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+            return 0; // Not sorted
         }
     }
-        
-    if(arr[n-1]>arr[n-2]){
-        printf("%d",arr[n-1]);
-        return 0;
+    return 1; // Sorted
+}
+
+int main() {
+    int n;
+    
+    // Read the number of elements
+    scanf("%d", &n);
+    
+    int arr[n];
+    
+    // Read the array elements
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
     }
-    printf("-1");
+    
+    // Check if the array is sorted
+    if (isSorted(arr, n)) {
+        printf("Sorted\n");
+    } else {
+        printf("Not Sorted\n");
+    }
+    
     return 0;
 }
