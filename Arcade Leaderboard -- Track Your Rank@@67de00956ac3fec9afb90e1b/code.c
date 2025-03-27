@@ -1,57 +1,46 @@
 #include <stdio.h>
 
-// Function to find the player's rank
-void findRanks(int leaderboard[], int n, int scores[], int m) {
-    int ranks[n]; // Store ranks of leaderboard scores
-    int uniqueRank = 1;
-
-    // Assign ranks to the leaderboard
+// Function to compute ranks
+void computeRanks(int scores[], int ranks[], int n) {
     ranks[0] = 1;
     for (int i = 1; i < n; i++) {
-        if (leaderboard[i] == leaderboard[i - 1]) {
-            ranks[i] = ranks[i - 1]; // Same rank for duplicate scores
+        if (scores[i] == scores[i - 1]) {
+            ranks[i] = ranks[i - 1];
         } else {
-            ranks[i] = ++uniqueRank; // Increment rank for a new score
+            ranks[i] = ranks[i - 1] + 1;
         }
     }
+}
 
-    int index = n - 1; // Start from the lowest leaderboard score
+// Function to determine player's rank for each game score
+void findRanks(int scores[], int ranks[], int n, int playerScores[], int m) {
+    int index = n - 1; // Start from the lowest rank in leaderboard
     for (int i = 0; i < m; i++) {
-        int score = scores[i];
-
-        // Move up the leaderboard while the player's score is higher
-        while (index >= 0 && scores[i] >= leaderboard[index]) {
-            index--;
+        while (index >= 0 && playerScores[i] >= scores[index]) {
+            index--; // Move up the leaderboard
         }
-
-        // Assign rank based on position
-        printf("%d\n", (index == -1) ? 1 : ranks[index] + 1);
+        printf("%d\n", (index >= 0) ? ranks[index] + 1 : 1);
     }
 }
 
 int main() {
-    int n, m;
-
-    // Read leaderboard size
+    int n;
     scanf("%d", &n);
-    int leaderboard[n];
-
-    // Read leaderboard scores
+    int scores[n], ranks[n];
     for (int i = 0; i < n; i++) {
-        scanf("%d", &leaderboard[i]);
-    }
-
-    // Read number of games
-    scanf("%d", &m);
-    int scores[m];
-
-    // Read game scores
-    for (int i = 0; i < m; i++) {
         scanf("%d", &scores[i]);
     }
-
-    // Find and print ranks
-    findRanks(leaderboard, n, scores, m);
-
+    
+    computeRanks(scores, ranks, n);
+    
+    int m;
+    scanf("%d", &m);
+    int playerScores[m];
+    for (int i = 0; i < m; i++) {
+        scanf("%d", &playerScores[i]);
+    }
+    
+    findRanks(scores, ranks, n, playerScores, m);
+    
     return 0;
 }
